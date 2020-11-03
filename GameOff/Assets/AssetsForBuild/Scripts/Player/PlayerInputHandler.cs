@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerInputHandler : MonoBehaviour
 {
     public Vector2 InputVector { get; private set; }
+
+    public bool PrepareForJump { get; private set; }
 
     public bool Jump { get; private set; }
 
@@ -20,10 +20,11 @@ public class PlayerInputHandler : MonoBehaviour
 
         InputVector = new Vector2(_horizontal, _vertical);
 
-        Jump = Input.GetButtonDown("Jump");
+        PrepareForJump = Input.GetButtonDown("Jump");
+
+        Jump = Input.GetButton("Jump");
 
         JumpBreak = Input.GetButtonUp("Jump");
-
-
     }
+
 }

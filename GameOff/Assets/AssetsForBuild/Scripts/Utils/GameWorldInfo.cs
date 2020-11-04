@@ -14,9 +14,9 @@ public class GameWorldInfo : MonoBehaviour
 
     private void Update()
     {
-        xVelDisplay.text = "Vel X: " + Round(controller.velocity.x, 2);
-        yVelDisplay.text = "Vel Y: " + Round(controller.velocity.y, 2);
-        zVelDisplay.text = "Vel Z: " + Round(controller.velocity.z, 2);
+        xVelDisplay.text = "X: " + Round(controller.velocity.x, 2);
+        yVelDisplay.text = "Y: " + Round(controller.velocity.y, 2);
+        zVelDisplay.text = "Z: " + Round(controller.velocity.z, 2);
 
         groundedDisplay.isOn = controller.isGrounded;
     }

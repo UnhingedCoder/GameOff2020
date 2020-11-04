@@ -9971,7 +9971,7 @@ MonoBehaviour:
   anim: {fileID: 2499540579787856805}
   fx_JetpackL: {fileID: 518947735}
   fx_JetpackR: {fileID: 4116010160117031125}
-  m_JetpackSmokeMaxEmission: 10
+  m_JetpackSmokeMaxEmission: 15
 --- !u!1 &8943781795690984365
 GameObject:
   m_ObjectHideFlags: 0

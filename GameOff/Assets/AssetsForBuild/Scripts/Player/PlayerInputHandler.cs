@@ -10,6 +10,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     public bool JumpBreak { get; private set; }
 
+    public bool InteractWithCar { get; private set; }
+
     private float _horizontal;
     private float _vertical;
 
@@ -25,6 +27,8 @@ public class PlayerInputHandler : MonoBehaviour
         Jump = Input.GetButton("Jump");
 
         JumpBreak = Input.GetButtonUp("Jump");
+
+        InteractWithCar = Input.GetKeyDown(KeyCode.F);
     }
 
 }

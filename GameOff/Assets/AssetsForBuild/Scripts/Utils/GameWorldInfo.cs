@@ -5,12 +5,17 @@ using UnityEngine.UI;
 
 public class GameWorldInfo : MonoBehaviour
 {
+    [Header("Player")]
     public Text xVelDisplay;
     public Text yVelDisplay;
     public Text zVelDisplay;
     public Toggle groundedDisplay;
 
     public CharacterController controller;
+
+    [Header("Time")]
+    public Text dayDisplay;
+    public Text timeDisplay;
 
     private void Update()
     {
@@ -19,6 +24,9 @@ public class GameWorldInfo : MonoBehaviour
         zVelDisplay.text = "Z: " + Round(controller.velocity.z, 2);
 
         groundedDisplay.isOn = controller.isGrounded;
+
+        timeDisplay.text = "TIME: " + Round(MoonTime.Instance.CurrentTime, 2);
+        dayDisplay.text = "DAY: " + Round(MoonTime.Instance.CurrentDay, 2);
     }
 
     public static float Round(float value, int digits)

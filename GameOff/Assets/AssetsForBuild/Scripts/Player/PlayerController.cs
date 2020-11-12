@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     private PlayerInputHandler playerInput;
     private PlayerEventTransmitter playerEventTransmitter;
+    private RoverController rover;
 
     [HideInInspector]public UnityEvent e_Jump;
 
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
         controller = this.GetComponent<CharacterController>();
         playerInput = this.GetComponent<PlayerInputHandler>();
         playerEventTransmitter = FindObjectOfType<PlayerEventTransmitter>();
+        rover = FindObjectOfType<RoverController>();
 
         playerEventTransmitter.e_Jump.AddListener(AddJumpForce);
         playerEventTransmitter.e_EnableMovement.AddListener(EnableMovement);
@@ -48,6 +50,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Move();
+        HandleCarInteractionState();
     }
 
     void Move()
@@ -89,6 +92,23 @@ public class PlayerController : MonoBehaviour
             this.transform.rotation = Quaternion.Euler(0f, cam.pivot.rotation.eulerAngles.y, 0f);
             Quaternion newRotation = Quaternion.LookRotation(new Vector3(_moveDir.x, 0, _moveDir.z));
             playerModel.rotation = Quaternion.Slerp(playerModel.rotation, newRotation, m_rotateSpeed * Time.deltaTime);
+        }
+    }
+
+    void HandleCarInteractionState()
+    {
+        if (playerInput.InteractWithCar)
+        {
+
+            if (rover.IsPlayerNearCar)
+            {
+                rover.GetInTheCar();
+            }
+
+            if (rover.IsPlayerInCar)
+            {
+                rover.GetOutOfCar();
+            }
         }
     }
 

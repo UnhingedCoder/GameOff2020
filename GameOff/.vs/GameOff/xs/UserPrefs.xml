@@ -1,18 +1,18 @@
 ﻿<Properties StartupConfiguration="{55518741-0CB8-1C6E-499E-58AC818B5B28}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/AssetsForBuild/Scripts/Camera/CameraController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/AssetsForBuild/Scripts/Camera/CineCamController.cs">
     <Files>
-      <File FileName="Assets/AssetsForBuild/Scripts/Camera/CameraController.cs" Line="5" Column="28" />
-      <File FileName="Assets/AssetsForBuild/Scripts/Player/PlayerController.cs" />
+      <File FileName="Assets/AssetsForBuild/Scripts/Rover/CarWizard.cs" Line="61" Column="3" />
+      <File FileName="Assets/AssetsForBuild/Scripts/Rover/RearWheelDrive.cs" />
+      <File FileName="Assets/AssetsForBuild/Scripts/Rover/SuspensionControl.cs" />
       <File FileName="Assets/AssetsForBuild/Scripts/Player/PlayerInputHandler.cs" />
-      <File FileName="Assets/AssetsForBuild/Scripts/Player/PlayerViewHandler.cs" />
-      <File FileName="Assets/AssetsForBuild/Scripts/Player/PlayerEventTransmitter.cs" />
-      <File FileName="Assets/AssetsForBuild/Scripts/Utils/FPSCounter.cs" />
-      <File FileName="Assets/AssetsForBuild/Scripts/Utils/GameWorldInfo.cs" />
+      <File FileName="Assets/AssetsForBuild/Scripts/Player/PlayerController.cs" Line="103" Column="39" />
+      <File FileName="Assets/AssetsForBuild/Scripts/Rover/RoverController.cs" Line="18" Column="14" />
+      <File FileName="Assets/AssetsForBuild/Scripts/Camera/CineCamController.cs" Line="7" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="cd02d47f-9578-47ad-b2f5-0d3cf45e5f37" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="18aa9afb-e8a9-435d-a445-fd9ec2e2982f" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

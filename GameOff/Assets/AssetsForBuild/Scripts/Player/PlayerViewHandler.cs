@@ -48,7 +48,7 @@ public class PlayerViewHandler : MonoBehaviour
 
     void HandleJackPackSmoke()
     {
-        if (controller.velocity.y > 0.01)
+        if (controller.velocity.y > 0.01 && !controller.isGrounded)
         {
             fxEmit_JetpackL.rateOverTime = m_JetpackSmokeMaxEmission;
             fxEmit_JetpackR.rateOverTime = m_JetpackSmokeMaxEmission;
